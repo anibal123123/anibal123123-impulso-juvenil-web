@@ -55,11 +55,10 @@ export function LoginScreen({ emailEnabled = false }: { emailEnabled?: boolean }
         if (password !== confirm) { setError('Las contraseñas no coinciden.'); return }
         const { error } = await authClient.signUp.email({ name: name.trim(), email: normalizedEmail, password, callbackURL: '/cuenta' })
         if (error) throw error
-        if (emailEnabled) {
-          setPassword(''); setConfirm(''); setSuccess('Registro recibido. Revisa tu correo y verifica tu cuenta antes de iniciar sesión.')
-        } else {
-          router.replace('/panel'); router.refresh()
-        }
+        setPassword(''); setConfirm('')
+        setSuccess(emailEnabled
+          ? 'Solicitud recibida. Verifica tu correo y espera la autorización del administrador. No podrás iniciar sesión antes de su aprobación.'
+          : 'Solicitud de registro recibida. Un administrador debe autorizar tu cuenta, asignar el plan y territorio antes de que puedas ingresar.')
       } else {
         const { error } = await authClient.signIn.email({ email: normalizedEmail, password })
         if (error) throw error
@@ -76,7 +75,7 @@ export function LoginScreen({ emailEnabled = false }: { emailEnabled?: boolean }
       <div className="login-symbol">{mode === 'register' ? <UserPlus size={23} /> : mode === 'recovery' ? <Mail size={23} /> : <LockKeyhole size={23} />}</div>
       <p className="login-eyebrow">PORTAL INSTITUCIONAL</p>
       <h1 id="login-title">{heading}</h1>
-      <p className="login-description">{mode === 'register' ? 'Regístrate para tener una cuenta personal en Impulso Juvenil.' : mode === 'recovery' ? 'Te enviaremos un enlace para crear una contraseña nueva.' : 'Ingresa a tu cuenta. También puedes explorar el panel público con datos ficticios.'}</p>
+      <p className="login-description">{mode === 'register' ? 'Solicita acceso institucional. La cuenta estará pendiente hasta que el administrador asigne tu plan y territorio.' : mode === 'recovery' ? 'Te enviaremos un enlace para crear una contraseña nueva.' : 'Ingresa con una cuenta autorizada por el administrador para acceder únicamente a los datos de tu territorio.'}</p>
       <form className="login-form" onSubmit={submit}>
         {mode === 'register' && <><label htmlFor="register-name">Nombre completo</label><input id="register-name" name="name" type="text" value={name} onChange={e => setName(e.target.value)} minLength={2} maxLength={80} autoComplete="name" placeholder="Tu nombre y apellido" required /></>}
         <label htmlFor="login-email">Correo electrónico</label>
@@ -99,8 +98,8 @@ export function LoginScreen({ emailEnabled = false }: { emailEnabled?: boolean }
       {mode === 'recovery' ? <button type="button" className="login-back" onClick={() => changeMode('login')}><ArrowLeft size={15} /> Volver a iniciar sesión</button> : <div className="login-demo">
         <span>{mode === 'register' ? '¿Ya tienes una cuenta?' : '¿Aún no tienes cuenta?'}</span>
         <button className="login-link-button" type="button" onClick={() => changeMode(mode === 'register' ? 'login' : 'register')}>{mode === 'register' ? 'Iniciar sesión' : 'Crear una cuenta'}</button>
-        <Link href="/demo">Explorar demostración pública <ArrowUpRight size={15} /></Link>
-        <small>El panel de demostración utiliza únicamente datos ficticios.</small>
+        <span>El acceso a las estadísticas requiere autorización administrativa.</span>
+        <small>El administrador asigna los niveles municipal, provincial o regional.</small>
       </div>}
     </section>
     <footer className="login-footer">Más oportunidades. Un mejor futuro.<span>Impulso Juvenil · Portal institucional</span></footer>

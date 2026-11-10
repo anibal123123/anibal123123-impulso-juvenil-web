@@ -107,3 +107,17 @@ export const estadisticaMunicipal = pgTable(
   },
   table => [unique().on(table.organismoId,table.periodo,table.territorio,table.metrica,table.dimension,table.categoria)],
 )
+
+
+// El registro crea una solicitud pendiente, SIN dar acceso a los indicadores.
+// La BD añade esta fila mediante un TRIGGER, incluso si el alta evita la interfaz.
+export const portalAcceso = pgTable('portal_acceso', {
+  userId: text('user_id').primaryKey().references(() => user.id, { onDelete: 'cascade' }),
+  estado: text('estado').notNull().default('pendiente'),
+  plan: text('plan'),
+  territorio: text('territorio'),
+  autorizadoPor: text('autorizado_por').references(() => user.id, { onDelete: 'set null' }),
+  autorizadoEn: timestamp('autorizado_en', { withTimezone: true }),
+  creadoEn: timestamp('creado_en', { withTimezone: true }).notNull().defaultNow(),
+  actualizadoEn: timestamp('actualizado_en', { withTimezone: true }).notNull().defaultNow(),
+})

@@ -12,7 +12,7 @@ export async function GET(request: Request) {
     const format = params.get('format') === 'json' ? 'json' : 'csv'
     const filters = filtersSchema.safeParse({ desde: params.get('desde'), hasta: params.get('hasta'), territorio: params.get('territorio') })
     if (!filters.success) return Response.json({ error: 'Filtros inválidos.' }, { status: 400 })
-    const { rows } = await getIndicators(member.organismoId)
+    const { rows } = await getIndicators(member)
     const data = applyFilters(rows, filters.data)
     const stamp = new Date().toISOString().slice(0, 10)
     if (format === 'json') {

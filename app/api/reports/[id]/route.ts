@@ -5,7 +5,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
   try {
     const member = await getMember()
     const { id } = await params
-    const report = await getReport(member.organismoId, id)
+    const report = await getReport(member.reportScope, id)
     if (!report) return Response.json({ error: 'Reporte no encontrado.' }, { status: 404 })
     return Response.json(report)
   } catch (error) {

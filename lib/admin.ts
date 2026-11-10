@@ -1,13 +1,10 @@
 import 'server-only'
 import { headers } from 'next/headers'
 import { auth } from '@/lib/auth'
+import { isGlobalAdmin } from '@/lib/access'
 
-/** Admin rights are set by stable Better Auth USER IDS, never by an email
- * typed during a public signup. The list is server-only, not NEXT_PUBLIC_*. */
-export function isAdminUserId(userId: string) {
-  const allowed = (process.env.ADMIN_USER_IDS ?? '').split(',').map(v => v.trim()).filter(Boolean)
-  return allowed.includes(userId)
-}
+/** Acceso único según ADMIN_USER_ID del servidor; no hay roles admin asignables en formularios. */
+export const isAdminUserId = isGlobalAdmin
 
 export async function getAdminSession() {
   const session = await auth.api.getSession({ headers: await headers() })

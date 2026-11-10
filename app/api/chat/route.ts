@@ -4,6 +4,7 @@ import { getIndicators, listReports } from '@/lib/data'
 import { ALL_TERRITORIES, applyFilters, buildSnapshot, byTerritory, compareSummaries, forecastRate, monthlySeries, periodsOf, summarize, territoriesOf } from '@/lib/metrics'
 import { authErrorResponse, getMember } from '@/lib/session'
 import { filtersSchema } from '@/lib/validation'
+import { PROVINCES } from '@/lib/geography'
 
 export const maxDuration = 60
 
@@ -22,9 +23,10 @@ export async function POST(request: Request) {
   const parsed = bodySchema.safeParse(await request.json().catch(() => null))
   if (!parsed.success) return Response.json({ error: 'Solicitud inválida.' }, { status: 400 })
 
-  const { rows } = await getIndicators(member.organismoId)
+  const { rows } = await getIndicators(member)
   const periods = periodsOf(rows)
   const territories = territoriesOf(rows)
+  const provinceFilters = Object.entries(PROVINCES).filter(([,cs])=>cs.some(t=>territories.includes(t))).map(([p])=>`Provincia: ${p}`)
   const defaults = { desde: periods[0], hasta: periods.at(-1), territorio: ALL_TERRITORIES }
   const resolve = (f: Partial<z.infer<typeof filtersSchema>>) => {
     const r = filtersSchema.safeParse({ ...defaults, ...f })
@@ -33,7 +35,7 @@ export async function POST(request: Request) {
   const optionalFilters = z.object({
     desde: z.string().optional().describe('Periodo inicial YYYY-MM-01'),
     hasta: z.string().optional().describe('Periodo final YYYY-MM-01'),
-    territorio: z.string().optional().describe(`"${ALL_TERRITORIES}" o uno de: ${territories.join(', ')}`),
+    territorio: z.string().optional().describe(`"${ALL_TERRITORIES}" o uno de: ${[...provinceFilters,...territories].join(', ')}`),
   })
 
   const files = parsed.data.archivos ?? []
@@ -47,7 +49,7 @@ export async function POST(request: Request) {
     model: 'anthropic/claude-sonnet-5.5',
     instructions: `Eres el asistente analítico del portal institucional de Impulso Juvenil para ${member.organismoNombre}. Responde en español, con claridad y brevedad.
 Los datos provienen de indicadores agregados de profesionales sociales, beneficiarios atendidos y bolsa de trabajo por periodo y comuna. Se prohíbe inferir identidades personales. ${rows.some(r => r.origen === 'sintetico') ? 'IMPORTANTE: los datos actuales son sintéticos de demostración; indícalo cuando presentes cifras.' : ''}
-Periodos disponibles: ${periods[0]} a ${periods.at(-1)}. Territorios: ${territories.join(', ')}.
+Periodos disponibles: ${periods[0]} a ${periods.at(-1)}. Territorios: ${[...provinceFilters,...territories].join(', ')}.
 Usa siempre las herramientas para obtener cifras; nunca inventes números. Explica cómo se calculó cada indicador (tasa de inserción = contrataciones confirmadas de personas sin empleo inicial / personas sin empleo al ingreso).
 Separa claramente "Hallazgos" (basados en datos) de "Sugerencias estratégicas" (recomendaciones). No hagas juicios sobre personas individuales.
 Para generar un informe, usa proponerInforme; la persona debe confirmarlo en la interfaz antes de guardarlo.${fileContext}`,
@@ -94,7 +96,7 @@ Para generar un informe, usa proponerInforme; la persona debe confirmarlo en la 
       historialReportes: tool({
         description: 'Lista los reportes guardados más recientes del organismo.',
         inputSchema: z.object({ busqueda: z.string().max(100).optional() }),
-        execute: async ({ busqueda }) => listReports(member.organismoId, busqueda ?? '', 1),
+        execute: async ({ busqueda }) => listReports(member.reportScope, busqueda ?? '', 1),
       }),
       proponerInforme: tool({
         description: 'Prepara una propuesta de informe (título, formato y filtros) para que la persona la confirme y descargue.',

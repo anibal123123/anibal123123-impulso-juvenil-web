@@ -1,133 +1,117 @@
-# Impulso Juvenil — actualización del portal municipal (noviembre de 2026)
+# Impulso Juvenil · V3 — planes territoriales, aprobación y 10.000 beneficiarios ficticios
 
-## 1. Qué cambió
+## Qué incorpora
 
-- **No se modificaron las tablas de autenticación** `user`, `account`, `session`, `verification` ni la política de contraseñas.
-- El prototipo web ahora muestra **información municipal agregada** sobre profesionales con rol social, beneficiarios vulnerables, empleabilidad y bolsa de trabajo.
-- La demostración incluye **exactamente 1.000 beneficiarios ficticios**, **56 profesionales ficticios** y **220 ofertas laborales ficticias**, distribuidos en enero–octubre de 2026 y seis comunas ilustrativas de la Región del Biobío.
-- Los datos de los beneficiarios se generan en `scripts/fixtures/beneficiarios-1000.json` y se convierten en `data/demo-aggregates.json`. El navegador y los reportes consumen **solo los agregados**, nunca fichas individuales.
-- Se agregaron las secciones *Beneficiarios*, *Profesionales* y *Bolsa de trabajo* al portal, y se redefinieron los indicadores de Empleabilidad, Territorios y Reportes.
-- Los informes PDF y Excel **solo exportan indicadores agrupados**. El Excel incluye desgloses por comuna, profesión, educación, edad, barrera laboral, ofertas y una pestaña de métricas agregadas.
-- `/demo` utiliza las estadísticas locales simuladas. `/panel`, cuando hay una cuenta autenticada asociada mediante `membresia` a un `organismo`, consulta los agregados de Neon para ese organismo. Si la cuenta no tiene municipio asignado, solo muestra la demostración.
-- El importador `/api/municipal/import` acepta exclusivamente CSV de estadísticas agregadas y exige `membresia.rol = 'admin'` o `'administrador'`; una municipalidad no puede consultar la de otra a través de `/api/municipal/indicadores`.
+- **Municipal:** solo indicadores de **una comuna** del Biobío.
+- **Provincial:** solo las comunas de **una provincia** (Arauco: 7, Biobío: 14, Concepción: 12).
+- **Regional:** las 33 comunas de la Región del Biobío, con comparación y filtros por provincia.
+- **Administrador único:** acceso a las 33 comunas, aprobación/rechazo de solicitudes y asignación de nivel y territorio.
+- **Registro:** las nuevas cuentas se crean en estado `pendiente`, **sin sesión**. El administrador decide `aprobado` o `rechazado` y solo las aprobadas pueden iniciar sesión. La verificación de correo, si está configurada, continúa siendo necesaria.
+- **Datos de ejemplo:** preserva los 1.000 beneficiarios antiguos y agrega **9.000**, para **10.000 en total**; 220 profesionales y 1.200 ofertas. La web y Neon solo utilizan estadísticas agregadas; los 9.000 perfiles ficticios adicionales están bajo `scripts/fixtures/` para pruebas/reproducción. No se crean 10.000 usuarios web.
+- **Autenticación existente:** Better Auth y tablas `user`, `account`, `session` conservadas.
 
-## 2. Cómo subir los cambios al repositorio
+**No implementa cobros, pasarelas de pago ni verificación automática de suscripciones.** El plan es un permiso que otorga manualmente el administrador, acorde al prototipo académico.
 
-Este ZIP es un **proyecto completo**, no un parche. Haz una copia del repositorio antes de reemplazar la versión en GitHub; usa una rama de pruebas o el procedimiento de GitHub Desktop para conservar la estructura `app/`, `components/`, `lib/`, `data/`, `scripts/`.
+## Orden obligatorio para actualizar sin perder acceso
 
-No subas un `.env.local`, contraseñas ni claves reales a GitHub. La configuración actual de Neon y de `BETTER_AUTH_SECRET` en Vercel debe **conservarse**.
+**1. Respalda Neon.** Realiza un respaldo/snapshot de la base antes de las migraciones y verifica que el entorno de Vercel apunte al proyecto correcto `neondb`. Haz la actualización de código en una rama de prueba de GitHub, no sobrescribas producción sin probar.
 
-## 3. Mostrar los 1.000 beneficiarios sin conectarse a Neon
-
-No hace falta ejecutar SQL para `/demo`. El archivo `data/demo-aggregates.json` ya fue generado desde los 1.000 perfiles sintéticos. Cuando publiques el código actualizado, entra a `/demo`: la cifra de "Personas incorporadas" para todas las comunas y enero–octubre será **1.000**.
-
-Si necesitas regenerarlos con la misma semilla determinista:
-
-```bash
-npm run demo:generate
-npm run demo:verify
-```
-
-Los archivos de simulación no contienen nombres, RUT, correos, diagnósticos ni contraseñas.
-
-## 4. Cargar los indicadores de prueba en Neon (`neondb`)
-
-**Nota**: desde este ZIP no se puede escribir directamente en tu Neon. Este paso requiere ejecutar SQL dentro de tu proyecto Neon. No pegues credenciales de conexión en el chat.
-
-1. Abre Neon y el proyecto PostgreSQL que ya vinculaste a Vercel.
-2. En SQL Editor, confirma que estás en la **base correcta** (`SELECT current_database();`) y que existe la tabla `organismo`.
-3. Ejecuta **`scripts/02-municipal-analytics.sql`**. Crea únicamente `estadistica_municipal`, sin borrar ni alterar las tablas antiguas.
-4. Ejecuta **`scripts/03-seed-demo-1000.sql`**. Crea seis organismos de **demostración** e inserta **2.083 filas de indicadores agregados** correspondientes a los 1.000 beneficiarios, 56 profesionales y 220 ofertas. Las múltiples filas de indicadores NO representan 2.083 personas.
-5. El SQL usa `ON CONFLICT DO UPDATE`: si lo vuelves a ejecutar no duplica esas cifras. **No borra** cuentas de usuario, sesiones ni datos anteriores.
-6. Comprueba las cargas con estas consultas de solo lectura:
+**2. Prepara tu administrador único ANTES de publicar el código.** Debe ser una cuenta de acceso web REAL y existente en `user`, no una cuenta ficticia. Desde Neon → SQL Editor, ejecuta:
 
 ```sql
-SELECT "metrica", SUM("valor") AS total
+SELECT "id", "name", "email" FROM "user" ORDER BY "createdAt";
+```
+
+Identifica **tu cuenta** y copia su `id` (no es la contraseña). En Vercel → proyecto web → Settings → Environment Variables, crea:
+
+```
+ADMIN_USER_ID=EL_ID_EXACTO_DE_TU_CUENTA
+```
+
+Configúralo para `Production` y para el entorno `Preview` que usarás en la prueba. Es una variable **solo de servidor**: no uses `NEXT_PUBLIC_`. Si existe `ADMIN_USER_IDS` antigua, elimina esa variable después de configurar la nueva para evitar confusiones. **Debe haber exactamente un ID de administrador.** El portal no dispone de un registro público de administradores.
+
+**3. Ejecuta migración en Neon → SQL Editor → `neondb`:**
+
+- `scripts/02-municipal-analytics.sql` **solo si todavía no existe** `estadistica_municipal` (el script es aditivo e idempotente para una instalación normal).
+- `scripts/04-accesos-territoriales.sql`: añade `portal_acceso`, las restricciones, un trigger que registra las cuentas nuevas como pendientes y las cuentas existentes que aún no tienen solicitud. No borra usuarios ni sesiones.
+
+La migración de permisos debe ejecutarse ANTES de desplegar el nuevo código porque todas las consultas protegidas comprobarán `portal_acceso`. Las cuentas existentes, salvo la única de administrador designada, comenzarán pendientes y requerirán revisión.
+
+**4. Actualiza el repositorio desde GitHub Desktop**: crea una rama `accesos-territoriales-v3`, abre `Repository → Show in Explorer`, copia el contenido del ZIP completo **manteniendo carpetas** (`app`, `components`, `lib`, `scripts`, etc.), confirma el commit y pulsa `Publish branch`. En Vercel prueba el despliegue de esa rama. La nueva versión de `/demo` redirige al panel y requiere autorización: no hay acceso público a todos los datos.
+
+**5. Carga las estadísticas ficticias** en Neon (mismo proyecto `neondb`):
+
+1. `scripts/05-demo-concepcion.sql`
+2. `scripts/06-demo-biobio.sql`
+3. `scripts/07-demo-arauco.sql`
+
+Cada archivo cubre una provincia. Son `UPSERT`: se pueden volver a ejecutar sin duplicar filas para la misma combinación de comuna, periodo y categoría. **Solo actualizan filas cuyo origen previo sea `sintetico`**; si ya importaste datos reales (`importado`), se conservan y los totales pueden diferir de la muestra. El SQL crea los 33 organismos ficticios de muestra, conservando los IDs antiguos de las seis comunas originales. No modifica contraseñas ni cuentas.
+
+La base recibe **12.237 filas de indicadores agregados**, NO 10.000 cuentas ni 10.000 fichas personales. Cada fila tiene mes, comuna, indicador, dimensión, categoría y cantidad. Las filas representan de forma agregada exactamente 10.000 beneficiarios, 220 profesionales y 1.200 ofertas ficticias.
+
+**6. Verifica en Neon:**
+
+```sql
+SELECT count(DISTINCT "territorio") AS comunas,
+       sum("valor") FILTER (WHERE "metrica"='beneficiarios'
+                                AND "dimension"='resumen' AND "categoria"='total') AS beneficiarios,
+       sum("valor") FILTER (WHERE "metrica"='profesionales'
+                                AND "dimension"='resumen' AND "categoria"='total') AS profesionales,
+       sum("valor") FILTER (WHERE "metrica"='ofertas'
+                                AND "dimension"='resumen' AND "categoria"='total') AS ofertas
 FROM "estadistica_municipal"
-WHERE "organismoId" LIKE 'demo-muni-%'
-  AND "dimension" = 'resumen' AND "categoria" = 'total'
-GROUP BY "metrica" ORDER BY "metrica";
+WHERE "origen"='sintetico' AND "organismoId" LIKE 'demo-muni-%';
 ```
 
-Totales esperados: `beneficiarios = 1000`, `sin_empleo_inicial = 871`, `contrataciones = 245`, `profesionales = 56`, `ofertas = 220`.
+Esperado, si no había otros datos sintéticos: `33` comunas, `10000` beneficiarios, `220` profesionales, `1200` ofertas.
+
+Para ver cuentas pendientes:
 
 ```sql
-SELECT o."nombre", SUM(e."valor") AS beneficiarios
-FROM "estadistica_municipal" e
-JOIN "organismo" o ON o."id"=e."organismoId"
-WHERE e."metrica"='beneficiarios'
-  AND e."dimension"='resumen' AND e."categoria"='total'
-  AND e."origen"='sintetico'
-GROUP BY o."nombre" ORDER BY o."nombre";
+SELECT pa.estado, count(*)
+FROM portal_acceso pa
+GROUP BY pa.estado ORDER BY pa.estado;
 ```
 
-## 5. Ver los datos de Neon en el panel privado
+**7. Publica la rama validada** mediante Pull Request hacia `main`; espera el despliegue **Ready**. Abre `https://TU-DOMINIO/admin/solicitudes` con el administrador. Allí asignas cada cuenta:
 
-**Las cuentas web no son los profesionales registrados en la aplicación móvil.** Son cuentas de acceso institucional. El registro público de Better Auth por sí solo no otorga acceso a datos municipales.
+- Municipal → una de las 33 comunas.
+- Provincial → Arauco, Biobío o Concepción.
+- Regional → Región del Biobío.
 
-1. Registra e inicia sesión con tu cuenta de acceso al portal web.
-2. Desde SQL Editor ejecuta `SELECT "id", "email" FROM "user";` e identifica tu `id` real.
-3. Selecciona el municipio de prueba al que debe tener acceso esa cuenta. Los IDs creados son:
+Al confirmar se almacena `plan`, `territorio`, `autorizado_por` y `autorizado_en`; la acción se valida en el **servidor**, no en el navegador. Otra opción es rechazar la solicitud; las cuentas rechazadas no pueden iniciar sesión. En `/admin/usuarios` están todas las cuentas con su estado y la descarga CSV, sin contraseñas.
 
-| ID | Comuna de prueba |
+**8. Pruebas funcionales**
+
+1. Registra una segunda cuenta de prueba desde el formulario público. Debe ver “Solicitud recibida” y **no entrar al panel**.
+2. Intenta iniciar sesión con esa cuenta. No debe crearse sesión ni permitir `/panel` o `/api/municipal/indicadores`.
+3. Desde la cuenta administrador entra en `/admin/solicitudes`, autoriza esa cuenta con plan **Municipal → Chiguayante**.
+4. Inicia sesión con ella: `/panel` debe mostrar **solo Chiguayante**; `/api/municipal/indicadores` y los reportes descargados también deben limitarse a Chiguayante.
+5. Haz pruebas con otra cuenta **Provincial → Arauco**, que debe ver 7 comunas, y una **Regional**, que debe ver las 33.
+6. Comprueba que el administrador ve las 33 y puede procesar solicitudes; un usuario normal no puede abrir `/admin/solicitudes` ni invocar sus API.
+7. Prueba cambiar o eliminar sesiones antiguas: ningún endpoint de estadísticas debe funcionar sin un permiso aprobado.
+
+**9. Evita confundir roles y datos:** `user` son cuentas institucionales de la web; los profesionales y beneficiarios de la app móvil son conjuntos separados. Los 10.000 perfiles son exclusivamente prueba, no se están recibiendo desde la app móvil. No existe sincronización automática móvil→web ni validación de pagos en esta versión.
+
+## Archivos principales
+
+| Archivo | Función |
 |---|---|
-| demo-muni-1 | Concepción |
-| demo-muni-2 | Chiguayante |
-| demo-muni-3 | Talcahuano |
-| demo-muni-4 | Hualpén |
-| demo-muni-5 | San Pedro de la Paz |
-| demo-muni-6 | Hualqui |
+| `lib/geography.ts` | 33 comunas, 3 provincias y validación territorial |
+| `lib/access.ts`, `lib/session.ts` | Admin único y permisos de consulta |
+| `lib/auth.ts` | Registro sin auto-login; bloquea sesiones no aprobadas |
+| `app/admin/solicitudes/page.tsx` | Pantalla privada para solicitudes pendientes |
+| `app/api/admin/solicitudes/[id]/route.ts` | Aprobación/rechazo mediante POST autenticado |
+| `lib/municipal-server.ts` | Filtrado de datos ANTES de devolver resultados |
+| `scripts/04-accesos-territoriales.sql` | Migración de solicitudes y trigger |
+| `scripts/05-demo-concepcion.sql`, `06-demo-biobio.sql`, `07-demo-arauco.sql` | Carga provincial de agregados |
+| `scripts/generate-synthetic-data.mjs` | Reproducción determinista de los 9.000 registros nuevos |
 
-4. **Solo como administrador de la base de datos**, asigna tu usuario a un único organismo, sustituyendo el ID de ejemplo:
+## Pruebas ejecutadas en preparación
 
-```sql
-INSERT INTO "membresia" ("userId", "organismoId", "rol")
-VALUES ('ID_REAL_DE_TU_CUENTA', 'demo-muni-1', 'administrador')
-ON CONFLICT ("userId") DO UPDATE
-  SET "organismoId" = EXCLUDED."organismoId", "rol" = EXCLUDED."rol";
-```
+- `node scripts/generate-synthetic-data.mjs` → genera la muestra.
+- `node scripts/verify-demo.mjs` → valida 10.000 beneficiarios, 33 comunas, 220 profesionales, 1.200 ofertas, contrataciones coherentes y ausencia de datos personales en agregados.
+- Verificación de sintaxis TypeScript/TSX de los archivos del proyecto.
+- Comprobación de límites de 1, 7, 12, 14 y 33 comunas según plan.
 
-5. Si existe `DATABASE_URL` correcta en las variables de Vercel, vuelve a desplegar la aplicación. Al entrar a `/panel`, el código debe consultar Neon para ese municipio. La vista de `/demo` seguirá mostrando los **seis municipios** como demostración pública.
-
-**Diferente de `ADMIN_USER_IDS`**: la variable `ADMIN_USER_IDS` controla quién puede consultar las **cuentas web registradas** en `/admin/usuarios`; `membresia` controla el **ámbito municipal** de `/panel` y sus API. No confundas los permisos.
-
-## 6. Importación posterior desde la aplicación móvil
-
-La web no recibe fichas completas de personas vulnerables. Un backend de integración debe convertir los registros móviles en filas con estas columnas CSV:
-
-`periodo,territorio,metrica,dimension,categoria,valor`
-
-Por ejemplo:
-
-```csv
-periodo,territorio,metrica,dimension,categoria,valor
-2026-11,Concepción,beneficiarios,resumen,total,40
-2026-11,Concepción,sin_empleo_inicial,resumen,total,32
-2026-11,Concepción,contrataciones,resumen,total,8
-2026-11,Concepción,profesionales,profesion,Trabajo social,4
-2026-11,Concepción,ofertas,sector_oferta,Comercio,9
-```
-
-Los agregados se importan desde **Reportes → Importar CSV**, disponible solo a usuarios municipales autorizados, o mediante `POST /api/municipal/import` con una sesión válida y autorización. La API valida formato, periodo, rol e identidad territorial, y actualiza valores por clave compuesta.
-
-Este contrato permite incorporar categorías y nuevas comunas sin reprogramar el dashboard, pero se deben acordar definiciones con el equipo que mantiene la app móvil para evitar dobles conteos.
-
-## 7. Definiciones importantes
-
-- **Personas incorporadas**: beneficiarios únicos según mes de alta de su cohorte. En este test cada persona aparece una sola vez.
-- **Sin empleo inicial**: beneficiarios que ingresaron sin empleo.
-- **Contrataciones confirmadas**: personas que ingresaron sin empleo y cuyo empleo posterior fue confirmado. Es un conteo de personas, no de contratos repetidos.
-- **Tasa de inserción**: contrataciones confirmadas de la cohorte / personas sin empleo al ingreso, por 100. En el test: **245 / 871 = 28,1 %**.
-- **Empleo actual**: todas las personas de la cohorte con empleo al cierre de la simulación, incluidas las que ya trabajaban al inicio; no es lo mismo que una inserción.
-- **Postulaciones y entrevistas**: cantidades de eventos, no beneficiarios únicos.
-- **Profesionales incorporados**: nuevas altas profesionales en el periodo; no equivale al número de profesionales simultáneamente activos.
-- **Ofertas publicadas**: vacantes publicadas en el periodo, no necesariamente vigentes.
-- **Periodo**: para beneficiarios, mes de incorporación; para profesionales, mes de registro; para ofertas, mes de publicación. Los resultados de empleabilidad de cada cohorte se consideran al cierre de octubre de 2026.
-
-## 8. Alcances y precauciones
-
-- Los 1.000 perfiles y todas las cifras son **inventados**. No son resultados de una municipalidad real.
-- No se ha desplegado el ZIP directamente a tu GitHub/Vercel ni escrito los datos en tu Neon desde esta sesión. Debes subir el proyecto y ejecutar los SQL descritos.
-- El diseño incluye control de acceso por organización, pero el backend de la app móvil no está conectado automáticamente. Los datos reales se integrarán mediante el contrato de indicadores.
-- Para datos reales, aplica evaluaciones de privacidad, seguridad, control de pertenencia municipal y **supresión de grupos muy pequeños**. Actualmente el demo sintético permite ver conteos pequeños; no debe usarse sin cambios para información social sensible.
-- Mantén la gestión de permisos, protección de información sensible y finalidad del tratamiento conforme a la normativa chilena aplicable.
+**Pendiente de prueba en tu entorno:** compilación completa `npm run build`, ejecución de SQL en Neon y pruebas reales de registro, autorización e inicio de sesión. El entorno donde se generó el paquete no pudo instalar dependencias; no se afirma que la versión ya esté publicada ni que la BD remota haya cambiado.

@@ -1,3 +1,4 @@
+import { PROVINCES, isProvince } from '@/lib/geography'
 // Resúmenes municipales agregados: datos de personas desidentificados.
 export type IndicatorRow = {
   periodo: string
@@ -26,7 +27,13 @@ export const ALL_TERRITORIES='todos'
 export const monthLabel=(p:string)=>new Date(`${p.slice(0,7)}-01T00:00:00Z`).toLocaleDateString('es-CL',{month:'short',year:'numeric',timeZone:'UTC'})
 export function periodsOf(rows:IndicatorRow[]){return [...new Set(rows.map(r=>r.periodo))].sort()}
 export function territoriesOf(rows:IndicatorRow[]){return [...new Set(rows.map(r=>r.territorio))].sort()}
-export function applyFilters(rows:IndicatorRow[],f:Filters){return rows.filter(r=>r.periodo>=f.desde&&r.periodo<=f.hasta&&(f.territorio===ALL_TERRITORIES||r.territorio===f.territorio))}
+export function applyFilters(rows:IndicatorRow[],f:Filters){
+  return rows.filter(r=>r.periodo>=f.desde&&r.periodo<=f.hasta&&(
+    f.territorio===ALL_TERRITORIES || r.territorio===f.territorio ||
+    (f.territorio.startsWith('Provincia: ') && isProvince(f.territorio.slice(11)) &&
+      (PROVINCES[f.territorio.slice(11) as keyof typeof PROVINCES] as readonly string[]).includes(r.territorio))
+  ))
+}
 const numeric=['acompanados','sinEmpleoInicial','contrataciones','empleoActual','formacion','busqueda','capacitaciones','postulaciones','entrevistas','profesionales','ofertas'] as const
 export function summarize(rows:IndicatorRow[]):Summary{
   const result=Object.fromEntries(numeric.map(k=>[k,rows.reduce((n,r)=>n+r[k],0)])) as Omit<Summary,'tasa'>

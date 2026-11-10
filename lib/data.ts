@@ -5,9 +5,10 @@ import { reporte } from '@/lib/db/schema'
 import { getMunicipalMetrics, importMunicipalMetrics } from '@/lib/municipal-server'
 import { summarizeMunicipal, type MunicipalMetric } from '@/lib/municipal-analytics'
 import type { IndicatorRow } from '@/lib/metrics'
+import type { Member } from '@/lib/session'
 
-export async function getIndicators(organismoId: string) {
-  const values = await getMunicipalMetrics(organismoId)
+export async function getIndicators(member: Member) {
+  const values = await getMunicipalMetrics(member.allowedTerritories)
   const keys = [...new Set(values.map(r=>`${r.period}|${r.territory}`))].sort()
   const rows: IndicatorRow[] = keys.map(key=>{
     const [period,territory]=key.split('|')
@@ -74,6 +75,6 @@ export async function upsertIndicators(organismoId: string, _importKey: string, 
     ]
     pairs.forEach(([metric,value])=>mapped.push({...base,metric,value}))
   }
-  await importMunicipalMetrics(organismoId,mapped)
+  await importMunicipalMetrics(mapped)
   return rows.length
 }

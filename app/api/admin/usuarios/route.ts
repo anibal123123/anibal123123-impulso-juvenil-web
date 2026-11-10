@@ -21,8 +21,8 @@ export async function GET(request: Request) {
       const { items, total } = await listUsers(q, 1, 10000)
       if (total > 10000) return Response.json({ error: 'Demasiados registros para exportar de una vez. Filtra tu búsqueda.' }, { status: 413 })
       const lines = [
-        ['ID', 'Nombre', 'Correo', 'Verificado', 'Fecha de registro'].map(csvCell).join(','),
-        ...items.map(u => [u.id, u.name, u.email, u.emailVerified ? 'Sí' : 'No', u.createdAt.toISOString()].map(csvCell).join(',')),
+        ['ID', 'Nombre', 'Correo', 'Verificado', 'Estado', 'Plan', 'Territorio', 'Fecha de registro'].map(csvCell).join(','),
+        ...items.map(u => [u.id, u.name, u.email, u.emailVerified ? 'Sí' : 'No', u.estado, u.plan??'', u.territorio??'', u.createdAt.toISOString()].map(csvCell).join(',')),
       ]
       return new Response('\ufeff' + lines.join('\r\n'), { headers: {
         'Content-Type': 'text/csv; charset=utf-8',

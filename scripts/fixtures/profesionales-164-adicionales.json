@@ -1,0 +1,986 @@
+[
+  {
+    "simulationId": "SIM-P-057",
+    "territory": "Florida",
+    "registrationMonth": "2026-02",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-058",
+    "territory": "Hualpén",
+    "registrationMonth": "2026-08",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-059",
+    "territory": "Yumbel",
+    "registrationMonth": "2026-05",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-060",
+    "territory": "Santa Bárbara",
+    "registrationMonth": "2026-01",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-061",
+    "territory": "Chiguayante",
+    "registrationMonth": "2026-04",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-062",
+    "territory": "Arauco",
+    "registrationMonth": "2026-04",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-063",
+    "territory": "Hualpén",
+    "registrationMonth": "2026-07",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-064",
+    "territory": "Concepción",
+    "registrationMonth": "2026-05",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-065",
+    "territory": "Tomé",
+    "registrationMonth": "2026-08",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-066",
+    "territory": "Quilaco",
+    "registrationMonth": "2026-09",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-067",
+    "territory": "Coronel",
+    "registrationMonth": "2026-08",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-068",
+    "territory": "Los Ángeles",
+    "registrationMonth": "2026-02",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-069",
+    "territory": "Concepción",
+    "registrationMonth": "2026-09",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-070",
+    "territory": "Los Ángeles",
+    "registrationMonth": "2026-02",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-071",
+    "territory": "Penco",
+    "registrationMonth": "2026-09",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-072",
+    "territory": "Yumbel",
+    "registrationMonth": "2026-07",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-073",
+    "territory": "Tomé",
+    "registrationMonth": "2026-10",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-074",
+    "territory": "Laja",
+    "registrationMonth": "2026-09",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-075",
+    "territory": "Quilaco",
+    "registrationMonth": "2026-01",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-076",
+    "territory": "Hualpén",
+    "registrationMonth": "2026-05",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-077",
+    "territory": "Concepción",
+    "registrationMonth": "2026-08",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-078",
+    "territory": "Mulchén",
+    "registrationMonth": "2026-10",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-079",
+    "territory": "Cañete",
+    "registrationMonth": "2026-08",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-080",
+    "territory": "Concepción",
+    "registrationMonth": "2026-05",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-081",
+    "territory": "Tucapel",
+    "registrationMonth": "2026-04",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-082",
+    "territory": "Tomé",
+    "registrationMonth": "2026-03",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-083",
+    "territory": "Arauco",
+    "registrationMonth": "2026-05",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-084",
+    "territory": "Coronel",
+    "registrationMonth": "2026-05",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-085",
+    "territory": "Nacimiento",
+    "registrationMonth": "2026-05",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-086",
+    "territory": "Nacimiento",
+    "registrationMonth": "2026-08",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-087",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-03",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-088",
+    "territory": "Los Ángeles",
+    "registrationMonth": "2026-06",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-089",
+    "territory": "Los Ángeles",
+    "registrationMonth": "2026-10",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-090",
+    "territory": "San Pedro de la Paz",
+    "registrationMonth": "2026-01",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-091",
+    "territory": "Quilaco",
+    "registrationMonth": "2026-10",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-092",
+    "territory": "Lebu",
+    "registrationMonth": "2026-03",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-093",
+    "territory": "Concepción",
+    "registrationMonth": "2026-09",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-094",
+    "territory": "Concepción",
+    "registrationMonth": "2026-10",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-095",
+    "territory": "San Pedro de la Paz",
+    "registrationMonth": "2026-09",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-096",
+    "territory": "Concepción",
+    "registrationMonth": "2026-02",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-097",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-05",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-098",
+    "territory": "Concepción",
+    "registrationMonth": "2026-01",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-099",
+    "territory": "Arauco",
+    "registrationMonth": "2026-03",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-100",
+    "territory": "Curanilahue",
+    "registrationMonth": "2026-07",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-101",
+    "territory": "Tomé",
+    "registrationMonth": "2026-02",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-102",
+    "territory": "Curanilahue",
+    "registrationMonth": "2026-10",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-103",
+    "territory": "Concepción",
+    "registrationMonth": "2026-01",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-104",
+    "territory": "Contulmo",
+    "registrationMonth": "2026-04",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-105",
+    "territory": "Concepción",
+    "registrationMonth": "2026-10",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-106",
+    "territory": "Hualpén",
+    "registrationMonth": "2026-05",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-107",
+    "territory": "Penco",
+    "registrationMonth": "2026-02",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-108",
+    "territory": "Tomé",
+    "registrationMonth": "2026-01",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-109",
+    "territory": "Los Álamos",
+    "registrationMonth": "2026-03",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-110",
+    "territory": "Tomé",
+    "registrationMonth": "2026-07",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-111",
+    "territory": "Los Álamos",
+    "registrationMonth": "2026-09",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-112",
+    "territory": "Chiguayante",
+    "registrationMonth": "2026-02",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-113",
+    "territory": "Concepción",
+    "registrationMonth": "2026-08",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-114",
+    "territory": "Cabrero",
+    "registrationMonth": "2026-08",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-115",
+    "territory": "Arauco",
+    "registrationMonth": "2026-06",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-116",
+    "territory": "Laja",
+    "registrationMonth": "2026-07",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-117",
+    "territory": "San Pedro de la Paz",
+    "registrationMonth": "2026-04",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-118",
+    "territory": "Negrete",
+    "registrationMonth": "2026-02",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-119",
+    "territory": "Tirúa",
+    "registrationMonth": "2026-02",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-120",
+    "territory": "Alto Biobío",
+    "registrationMonth": "2026-05",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-121",
+    "territory": "Curanilahue",
+    "registrationMonth": "2026-05",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-122",
+    "territory": "San Pedro de la Paz",
+    "registrationMonth": "2026-06",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-123",
+    "territory": "Coronel",
+    "registrationMonth": "2026-09",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-124",
+    "territory": "Yumbel",
+    "registrationMonth": "2026-02",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-125",
+    "territory": "Lota",
+    "registrationMonth": "2026-03",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-126",
+    "territory": "Lota",
+    "registrationMonth": "2026-01",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-127",
+    "territory": "Los Ángeles",
+    "registrationMonth": "2026-07",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-128",
+    "territory": "Tirúa",
+    "registrationMonth": "2026-06",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-129",
+    "territory": "Coronel",
+    "registrationMonth": "2026-01",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-130",
+    "territory": "Los Ángeles",
+    "registrationMonth": "2026-06",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-131",
+    "territory": "Quilaco",
+    "registrationMonth": "2026-03",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-132",
+    "territory": "Curanilahue",
+    "registrationMonth": "2026-09",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-133",
+    "territory": "Cañete",
+    "registrationMonth": "2026-08",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-134",
+    "territory": "Los Ángeles",
+    "registrationMonth": "2026-03",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-135",
+    "territory": "Chiguayante",
+    "registrationMonth": "2026-03",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-136",
+    "territory": "Los Ángeles",
+    "registrationMonth": "2026-09",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-137",
+    "territory": "Negrete",
+    "registrationMonth": "2026-06",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-138",
+    "territory": "Coronel",
+    "registrationMonth": "2026-08",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-139",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-01",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-140",
+    "territory": "Quilaco",
+    "registrationMonth": "2026-02",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-141",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-02",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-142",
+    "territory": "Alto Biobío",
+    "registrationMonth": "2026-04",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-143",
+    "territory": "Arauco",
+    "registrationMonth": "2026-06",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-144",
+    "territory": "Santa Bárbara",
+    "registrationMonth": "2026-09",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-145",
+    "territory": "Arauco",
+    "registrationMonth": "2026-08",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-146",
+    "territory": "Los Álamos",
+    "registrationMonth": "2026-06",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-147",
+    "territory": "Los Álamos",
+    "registrationMonth": "2026-05",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-148",
+    "territory": "Chiguayante",
+    "registrationMonth": "2026-05",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-149",
+    "territory": "Concepción",
+    "registrationMonth": "2026-08",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-150",
+    "territory": "Concepción",
+    "registrationMonth": "2026-08",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-151",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-06",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-152",
+    "territory": "Santa Juana",
+    "registrationMonth": "2026-06",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-153",
+    "territory": "Tucapel",
+    "registrationMonth": "2026-06",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-154",
+    "territory": "Tirúa",
+    "registrationMonth": "2026-10",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-155",
+    "territory": "Lebu",
+    "registrationMonth": "2026-03",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-156",
+    "territory": "Laja",
+    "registrationMonth": "2026-10",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-157",
+    "territory": "Chiguayante",
+    "registrationMonth": "2026-04",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-158",
+    "territory": "Chiguayante",
+    "registrationMonth": "2026-06",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-159",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-03",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-160",
+    "territory": "Concepción",
+    "registrationMonth": "2026-02",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-161",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-01",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-162",
+    "territory": "Lota",
+    "registrationMonth": "2026-05",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-163",
+    "territory": "Hualpén",
+    "registrationMonth": "2026-02",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-164",
+    "territory": "Contulmo",
+    "registrationMonth": "2026-02",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-165",
+    "territory": "Lota",
+    "registrationMonth": "2026-05",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-166",
+    "territory": "Tucapel",
+    "registrationMonth": "2026-01",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-167",
+    "territory": "Chiguayante",
+    "registrationMonth": "2026-07",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-168",
+    "territory": "Arauco",
+    "registrationMonth": "2026-05",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-169",
+    "territory": "Hualpén",
+    "registrationMonth": "2026-01",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-170",
+    "territory": "Concepción",
+    "registrationMonth": "2026-06",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-171",
+    "territory": "Cabrero",
+    "registrationMonth": "2026-01",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-172",
+    "territory": "Cañete",
+    "registrationMonth": "2026-07",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-173",
+    "territory": "Tirúa",
+    "registrationMonth": "2026-02",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-174",
+    "territory": "Hualpén",
+    "registrationMonth": "2026-08",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-175",
+    "territory": "Coronel",
+    "registrationMonth": "2026-09",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-176",
+    "territory": "Nacimiento",
+    "registrationMonth": "2026-05",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-177",
+    "territory": "Concepción",
+    "registrationMonth": "2026-04",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-178",
+    "territory": "Yumbel",
+    "registrationMonth": "2026-08",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-179",
+    "territory": "Tirúa",
+    "registrationMonth": "2026-01",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-180",
+    "territory": "Curanilahue",
+    "registrationMonth": "2026-01",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-181",
+    "territory": "Arauco",
+    "registrationMonth": "2026-02",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-182",
+    "territory": "Lota",
+    "registrationMonth": "2026-04",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-183",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-07",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-184",
+    "territory": "Quilaco",
+    "registrationMonth": "2026-02",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-185",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-04",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-186",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-04",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-187",
+    "territory": "Quilaco",
+    "registrationMonth": "2026-06",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-188",
+    "territory": "San Pedro de la Paz",
+    "registrationMonth": "2026-01",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-189",
+    "territory": "Coronel",
+    "registrationMonth": "2026-05",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-190",
+    "territory": "Arauco",
+    "registrationMonth": "2026-09",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-191",
+    "territory": "Cañete",
+    "registrationMonth": "2026-04",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-192",
+    "territory": "Concepción",
+    "registrationMonth": "2026-10",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-193",
+    "territory": "Los Ángeles",
+    "registrationMonth": "2026-01",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-194",
+    "territory": "Nacimiento",
+    "registrationMonth": "2026-04",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-195",
+    "territory": "Laja",
+    "registrationMonth": "2026-01",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-196",
+    "territory": "Tucapel",
+    "registrationMonth": "2026-03",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-197",
+    "territory": "Tirúa",
+    "registrationMonth": "2026-10",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-198",
+    "territory": "Yumbel",
+    "registrationMonth": "2026-02",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-199",
+    "territory": "Santa Bárbara",
+    "registrationMonth": "2026-09",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-200",
+    "territory": "San Pedro de la Paz",
+    "registrationMonth": "2026-09",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-201",
+    "territory": "Mulchén",
+    "registrationMonth": "2026-06",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-202",
+    "territory": "Tomé",
+    "registrationMonth": "2026-05",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-203",
+    "territory": "Coronel",
+    "registrationMonth": "2026-05",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-204",
+    "territory": "Coronel",
+    "registrationMonth": "2026-01",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-205",
+    "territory": "Tomé",
+    "registrationMonth": "2026-03",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-206",
+    "territory": "Hualpén",
+    "registrationMonth": "2026-04",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-207",
+    "territory": "Lota",
+    "registrationMonth": "2026-06",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-208",
+    "territory": "Quilaco",
+    "registrationMonth": "2026-04",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-209",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-05",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-210",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-04",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-211",
+    "territory": "Lota",
+    "registrationMonth": "2026-02",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-212",
+    "territory": "Antuco",
+    "registrationMonth": "2026-10",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-213",
+    "territory": "San Pedro de la Paz",
+    "registrationMonth": "2026-09",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-214",
+    "territory": "Chiguayante",
+    "registrationMonth": "2026-05",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-215",
+    "territory": "Concepción",
+    "registrationMonth": "2026-01",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-216",
+    "territory": "Laja",
+    "registrationMonth": "2026-08",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-217",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-03",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-218",
+    "territory": "Quilaco",
+    "registrationMonth": "2026-04",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-219",
+    "territory": "Arauco",
+    "registrationMonth": "2026-04",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-220",
+    "territory": "San Rosendo",
+    "registrationMonth": "2026-06",
+    "profession": "Otra profesión social"
+  }
+]

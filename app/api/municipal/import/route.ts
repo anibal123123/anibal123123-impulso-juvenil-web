@@ -2,6 +2,7 @@ import { authErrorResponse, AuthError, getMember } from '@/lib/session'
 import { importMunicipalMetrics } from '@/lib/municipal-server'
 import { parseCsv } from '@/lib/files'
 import type { MunicipalMetric } from '@/lib/municipal-analytics'
+import { ALL_COMMUNES } from '@/lib/geography'
 
 export const maxDuration=60
 const METRICS: Record<string, Set<string>> = {
@@ -18,7 +19,7 @@ const required=['periodo','territorio','metrica','dimension','categoria','valor'
 export async function POST(request:Request){
   try {
     const member=await getMember()
-    if(!['administrador','admin'].includes(member.rol)) throw new AuthError(403)
+    if(member.plan !== 'admin') throw new AuthError(403)
     const form=await request.formData()
     const file=form.get('file')
     if(!(file instanceof File)||!file.name.toLowerCase().endsWith('.csv')) return Response.json({error:'Adjunta un CSV de indicadores agregados.'},{status:400})
@@ -39,9 +40,8 @@ export async function POST(request:Request){
       const valueStr=get('valor')
       const value=Number(valueStr)
       const key=[period,territory,metric,dimension,category].join('|')
-      const municipalTerritory=member.organismoNombre.match(/^Municipalidad de (.+?)(?: ·|$)/i)?.[1]
       if (!/^20\d{2}-(0[1-9]|1[0-2])$/.test(period)|| !/^\d{1,7}$/.test(valueStr)||!Number.isSafeInteger(value)||value>1000000||
-        !territory||territory.length>80 || (!!municipalTerritory&&territory!==municipalTerritory) ||
+        !ALL_COMMUNES.includes(territory) ||
         !METRICS[metric]?.has(dimension)||!category||category.length>90 || (dimension==='resumen'&&category!=='total') || seen.has(key)) {
         errors.push(`Fila ${index+2}: dato inválido, duplicado o fuera del municipio.`)
       } else {
@@ -52,7 +52,7 @@ export async function POST(request:Request){
     }
     if(errors.length)return Response.json({error:errors.join(' ')},{status:422})
     if(!valid.length)return Response.json({error:'El archivo está vacío.'},{status:400})
-    const saved=await importMunicipalMetrics(member.organismoId,valid)
+    const saved=await importMunicipalMetrics(valid)
     return Response.json({guardadas:saved},{status:201})
   } catch(error) {return authErrorResponse(error)}
 }

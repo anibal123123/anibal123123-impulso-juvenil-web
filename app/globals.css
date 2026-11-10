@@ -213,3 +213,13 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 @media(max-width:1100px){.inline-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.detail-grid{grid-template-columns:1fr}.inline-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:430px){.inline-stat-grid{grid-template-columns:1fr}}
+
+/* Consola de aprobación institucional */
+.approvals-list{display:grid;gap:16px;margin-top:20px}
+.approval-item{border:1px solid #d9e5dc;border-radius:14px;padding:18px;display:grid;gap:14px;background:white}
+.approval-item>div:first-child{display:grid;gap:4px;overflow-wrap:anywhere}
+.approval-item>div:first-child span,.approval-item small{color:#617268}
+.approval-controls{display:flex;align-items:end;gap:12px;flex-wrap:wrap}
+.approval-controls label{display:grid;gap:6px;font-size:13px;font-weight:600;color:#385c49}
+.approval-controls select{min-width:160px;max-width:240px;padding:10px;border-radius:9px;border:1px solid #bdcfc4;color:#1a3024;background:#fff}
+.approval-controls button{min-height:39px}

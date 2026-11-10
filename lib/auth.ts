@@ -1,6 +1,7 @@
 import { betterAuth } from 'better-auth'
 import { APIError, createAuthMiddleware } from 'better-auth/api'
 import { pool } from '@/lib/db'
+import { approvedScope } from '@/lib/access'
 import { sendAccountEmail, emailIsConfigured } from '@/lib/email'
 
 // Better Auth persists accounts and sessions in PostgreSQL and hashes passwords
@@ -17,6 +18,7 @@ export const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
     disableSignUp: false,
+    autoSignIn: false, // Registro = solicitud pendiente. Nunca iniciar sesión automáticamente.
     minPasswordLength: 10,
     maxPasswordLength: 128,
     requireEmailVerification: emailIsConfigured,
@@ -37,6 +39,23 @@ export const auth = betterAuth({
       },
     },
   } : {}),
+  databaseHooks: {
+    session: {
+      create: {
+        before: async (newSession) => {
+          // Bloquea la creación de nuevas sesiones si la cuenta no está aprobada.
+          // Además se valida el permiso en CADA petición protegida para revocación inmediata.
+          const scope = await approvedScope(newSession.userId)
+          if (!scope) {
+            throw new APIError('FORBIDDEN', {
+              message: 'La cuenta todavía no está aprobada o fue rechazada por el administrador.',
+            })
+          }
+          return { data: newSession }
+        },
+      },
+    },
+  },
   hooks: {
     // Validate on the SERVER: bypassing the client cannot weaken the password policy.
     before: createAuthMiddleware(async ctx => {

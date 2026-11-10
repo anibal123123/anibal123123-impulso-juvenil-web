@@ -1,3 +1,5 @@
+import { PROVINCES, isProvince } from '@/lib/geography'
+
 // Modelo analítico MINIMIZADO: métricas agregadas por mes y comuna.
 // Ninguna entidad de este módulo contiene nombres, correos, RUT ni fichas individuales.
 export type MunicipalMetric = {
@@ -44,7 +46,11 @@ export type MunicipalSummary = {
 
 export function filterMunicipal(rows: MunicipalMetric[], period: string, territory: string) {
   const [from, to] = period.split('|')
-  return rows.filter(r => r.period >= from && r.period <= to && (territory === 'Todos los territorios' || r.territory === territory))
+  return rows.filter(r => r.period >= from && r.period <= to && (
+    territory === 'Todos los territorios' || r.territory === territory ||
+    (territory.startsWith('Provincia: ') && isProvince(territory.slice(11)) &&
+      (PROVINCES[territory.slice(11) as keyof typeof PROVINCES] as readonly string[]).includes(r.territory))
+  ))
 }
 
 export function sumMetric(rows: MunicipalMetric[], metric: string, dimension = 'resumen', category = 'total') {
