@@ -88,3 +88,22 @@ export const reporte = pgTable('reporte', {
   snapshot: jsonb('snapshot').notNull(),
   createdAt: timestamp('createdAt', { withTimezone: true }).notNull().defaultNow(),
 })
+
+// Estadísticas municipales minimizadas por mes, comuna y categoría. NO perfiles de personas.
+// Las cuentas de acceso web permanecen en user/account/session; son conjuntos separados.
+export const estadisticaMunicipal = pgTable(
+  'estadistica_municipal',
+  {
+    id: serial('id').primaryKey(),
+    organismoId: text('organismoId').notNull().references(() => organismo.id),
+    periodo: date('periodo').notNull(),
+    territorio: text('territorio').notNull(),
+    metrica: text('metrica').notNull(),
+    dimension: text('dimension').notNull(),
+    categoria: text('categoria').notNull(),
+    valor: integer('valor').notNull(),
+    origen: text('origen').notNull().default('sintetico'),
+    updatedAt: timestamp('updatedAt', { withTimezone: true }).notNull().defaultNow(),
+  },
+  table => [unique().on(table.organismoId,table.periodo,table.territorio,table.metrica,table.dimension,table.categoria)],
+)

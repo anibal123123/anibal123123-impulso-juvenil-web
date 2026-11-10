@@ -3,7 +3,7 @@ import { applyFilters } from '@/lib/metrics'
 import { authErrorResponse, getMember } from '@/lib/session'
 import { filtersSchema, neutralizeCell } from '@/lib/validation'
 
-const COLUMNS = ['periodo', 'territorio', 'acompanados', 'empleados', 'formacion', 'busqueda', 'origen'] as const
+const COLUMNS = ['periodo', 'territorio', 'acompanados', 'sinEmpleoInicial', 'contrataciones', 'empleoActual', 'formacion', 'busqueda', 'capacitaciones', 'postulaciones', 'entrevistas', 'profesionales', 'ofertas', 'origen'] as const
 
 export async function GET(request: Request) {
   try {

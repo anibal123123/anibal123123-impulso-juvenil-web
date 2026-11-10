@@ -1,0 +1,338 @@
+[
+  {
+    "simulationId": "SIM-P-001",
+    "territory": "Concepción",
+    "registrationMonth": "2026-07",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-002",
+    "territory": "San Pedro de la Paz",
+    "registrationMonth": "2026-10",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-003",
+    "territory": "Hualpén",
+    "registrationMonth": "2026-03",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-004",
+    "territory": "San Pedro de la Paz",
+    "registrationMonth": "2026-10",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-005",
+    "territory": "Concepción",
+    "registrationMonth": "2026-07",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-006",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-07",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-007",
+    "territory": "San Pedro de la Paz",
+    "registrationMonth": "2026-08",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-008",
+    "territory": "Concepción",
+    "registrationMonth": "2026-04",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-009",
+    "territory": "Hualpén",
+    "registrationMonth": "2026-06",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-010",
+    "territory": "Concepción",
+    "registrationMonth": "2026-03",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-011",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-10",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-012",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-09",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-013",
+    "territory": "Concepción",
+    "registrationMonth": "2026-09",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-014",
+    "territory": "Hualpén",
+    "registrationMonth": "2026-02",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-015",
+    "territory": "Concepción",
+    "registrationMonth": "2026-02",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-016",
+    "territory": "San Pedro de la Paz",
+    "registrationMonth": "2026-02",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-017",
+    "territory": "Hualqui",
+    "registrationMonth": "2026-05",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-018",
+    "territory": "Concepción",
+    "registrationMonth": "2026-04",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-019",
+    "territory": "Chiguayante",
+    "registrationMonth": "2026-09",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-020",
+    "territory": "San Pedro de la Paz",
+    "registrationMonth": "2026-08",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-021",
+    "territory": "Concepción",
+    "registrationMonth": "2026-01",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-022",
+    "territory": "Hualpén",
+    "registrationMonth": "2026-10",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-023",
+    "territory": "Chiguayante",
+    "registrationMonth": "2026-07",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-024",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-05",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-025",
+    "territory": "San Pedro de la Paz",
+    "registrationMonth": "2026-02",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-026",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-04",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-027",
+    "territory": "Chiguayante",
+    "registrationMonth": "2026-04",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-028",
+    "territory": "Chiguayante",
+    "registrationMonth": "2026-10",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-029",
+    "territory": "Hualpén",
+    "registrationMonth": "2026-03",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-030",
+    "territory": "Concepción",
+    "registrationMonth": "2026-09",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-031",
+    "territory": "Concepción",
+    "registrationMonth": "2026-09",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-032",
+    "territory": "Chiguayante",
+    "registrationMonth": "2026-09",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-033",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-10",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-034",
+    "territory": "San Pedro de la Paz",
+    "registrationMonth": "2026-04",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-035",
+    "territory": "San Pedro de la Paz",
+    "registrationMonth": "2026-03",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-036",
+    "territory": "Chiguayante",
+    "registrationMonth": "2026-06",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-037",
+    "territory": "Hualpén",
+    "registrationMonth": "2026-02",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-038",
+    "territory": "Chiguayante",
+    "registrationMonth": "2026-01",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-039",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-08",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-040",
+    "territory": "Concepción",
+    "registrationMonth": "2026-08",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-041",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-07",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-042",
+    "territory": "Concepción",
+    "registrationMonth": "2026-04",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-043",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-08",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-044",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-03",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-045",
+    "territory": "Concepción",
+    "registrationMonth": "2026-03",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-046",
+    "territory": "Hualpén",
+    "registrationMonth": "2026-02",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-047",
+    "territory": "Concepción",
+    "registrationMonth": "2026-07",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-048",
+    "territory": "Hualpén",
+    "registrationMonth": "2026-08",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-049",
+    "territory": "Hualqui",
+    "registrationMonth": "2026-10",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-050",
+    "territory": "Concepción",
+    "registrationMonth": "2026-07",
+    "profession": "Otra profesión social"
+  },
+  {
+    "simulationId": "SIM-P-051",
+    "territory": "Hualpén",
+    "registrationMonth": "2026-01",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-052",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-03",
+    "profession": "Terapia ocupacional"
+  },
+  {
+    "simulationId": "SIM-P-053",
+    "territory": "Talcahuano",
+    "registrationMonth": "2026-03",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-054",
+    "territory": "Concepción",
+    "registrationMonth": "2026-08",
+    "profession": "Trabajo social"
+  },
+  {
+    "simulationId": "SIM-P-055",
+    "territory": "San Pedro de la Paz",
+    "registrationMonth": "2026-07",
+    "profession": "Psicología"
+  },
+  {
+    "simulationId": "SIM-P-056",
+    "territory": "San Pedro de la Paz",
+    "registrationMonth": "2026-06",
+    "profession": "Trabajo social"
+  }
+]

@@ -1,0 +1,22 @@
+import fs from 'node:fs'
+const read=file=>JSON.parse(fs.readFileSync(new URL(file,import.meta.url),'utf-8'))
+const profiles=read('./fixtures/beneficiarios-1000.json')
+const professionals=read('./fixtures/profesionales-56.json')
+const offers=read('./fixtures/ofertas-220.json')
+const data=read('../data/demo-aggregates.json').rows
+const sum=(metric,dimension='resumen')=>data.filter(r=>r.metric===metric&&r.dimension===dimension&&r.category==='total').reduce((a,r)=>a+r.value,0)
+const check=(name,condition)=>{if(!condition)throw new Error(`Fallo: ${name}`);console.log(`✓ ${name}`)}
+check('1000 perfiles de prueba',profiles.length===1000)
+check('ID simulados únicos',new Set(profiles.map(p=>p.simulationId)).size===1000)
+check('ningún nombre / RUT / correo de beneficiario en agregados',data.every(r=>!('simulationId' in r)&&!('email' in r)&&!('name' in r)))
+check('contabilización de beneficiarios',sum('beneficiarios')===1000)
+check('suma de cohortes por edad',data.filter(r=>r.metric==='beneficiarios'&&r.dimension==='edad').reduce((a,r)=>a+r.value,0)===1000)
+check('suma de barreras principales',data.filter(r=>r.metric==='beneficiarios'&&r.dimension==='barrera').reduce((a,r)=>a+r.value,0)===1000)
+check('56 profesionales',professionals.length===56&&sum('profesionales')===56)
+check('220 ofertas',offers.length===220&&sum('ofertas')===220)
+check('solo contrataciones de personas sin empleo inicial',profiles.every(p=>!p.confirmedPlacement||p.initialEmployment==='Sin empleo'))
+check('contadores de contratación coherentes',sum('contrataciones')===profiles.filter(p=>p.confirmedPlacement).length)
+check('las tres situaciones laborales cubren 1000 beneficiarios',sum('con_empleo_actual')+sum('en_formacion')+sum('en_busqueda')===1000)
+check('ningún valor negativo',data.every(r=>r.value>=0&&Number.isInteger(r.value)))
+check('no se incluyen contraseñas',profiles.every(p=>!('password' in p))&&data.every(r=>!('password' in r)))
+console.log('\nVerificación completa: los 1.000 perfiles se procesan a estadísticas agregadas.')
