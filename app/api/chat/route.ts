@@ -46,16 +46,16 @@ export async function POST(request: Request) {
   const result = streamText({
     model: 'anthropic/claude-sonnet-5.5',
     instructions: `Eres el asistente analítico del portal institucional de Impulso Juvenil para ${member.organismoNombre}. Responde en español, con claridad y brevedad.
-Los datos provienen de indicadores agregados por periodo y territorio sobre empleabilidad juvenil. ${rows.some(r => r.origen === 'sintetico') ? 'IMPORTANTE: los datos actuales son sintéticos de demostración; indícalo cuando presentes cifras.' : ''}
+Los datos provienen de indicadores agregados de profesionales sociales, beneficiarios atendidos y bolsa de trabajo por periodo y comuna. Se prohíbe inferir identidades personales. ${rows.some(r => r.origen === 'sintetico') ? 'IMPORTANTE: los datos actuales son sintéticos de demostración; indícalo cuando presentes cifras.' : ''}
 Periodos disponibles: ${periods[0]} a ${periods.at(-1)}. Territorios: ${territories.join(', ')}.
-Usa siempre las herramientas para obtener cifras; nunca inventes números. Explica cómo se calculó cada indicador (tasa de inserción = con empleo / acompañados).
+Usa siempre las herramientas para obtener cifras; nunca inventes números. Explica cómo se calculó cada indicador (tasa de inserción = contrataciones confirmadas de personas sin empleo inicial / personas sin empleo al ingreso).
 Separa claramente "Hallazgos" (basados en datos) de "Sugerencias estratégicas" (recomendaciones). No hagas juicios sobre personas individuales.
 Para generar un informe, usa proponerInforme; la persona debe confirmarlo en la interfaz antes de guardarlo.${fileContext}`,
     messages: await convertToModelMessages(parsed.data.messages.slice(-20)),
     stopWhen: isStepCount(6),
     tools: {
       resumenIndicadores: tool({
-        description: 'Totales, tasa de inserción, desglose por territorio y serie mensual para los filtros indicados.',
+        description: 'Beneficiarios, profesionales, ofertas, contrataciones, tasa de inserción, desglose por comuna y serie mensual para los filtros indicados.',
         inputSchema: optionalFilters,
         execute: async f => {
           const filters = resolve(f)

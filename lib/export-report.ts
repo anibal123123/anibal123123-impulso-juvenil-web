@@ -1,29 +1,75 @@
-import { type DemoRecord, summarize } from './demo-data';
-export async function exportReport(format: 'xlsx' | 'pdf', rows: DemoRecord[], scope: string) {
- const summary = summarize(rows);
- if (format === 'xlsx') {
-  const { Workbook } = await import('exceljs');
-  const workbook = new Workbook();
-  const overview = workbook.addWorksheet('Resumen');
-  overview.addRows([['Impulso Juvenil — DATOS FICTICIOS'], [scope], ['Personas acompañadas', summary.total], ['Con empleo', summary.employed], ['En formación', summary.training], ['Tasa de inserción (%)', summary.rate]]);
-  overview.getColumn(1).width = 44;
-  const sheet = workbook.addWorksheet('Datos de ejemplo');
-  sheet.columns = [{header:'Código anónimo',key:'id',width:22},{header:'Territorio',key:'territory',width:22},{header:'Mes (2026)',key:'month',width:16},{header:'Situación laboral',key:'status',width:24},{header:'Edad',key:'age',width:12},{header:'Equipo',key:'professional',width:18}];
-  sheet.addRows(rows);
-  sheet.getRow(1).font = { bold: true, color: {argb:'FFFFFFFF'} };
-  sheet.getRow(1).fill = {type:'pattern',pattern:'solid',fgColor:{argb:'FF246B52'}};
-  const buffer = await workbook.xlsx.writeBuffer();
-  const url = URL.createObjectURL(new Blob([buffer], {type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'}));
-  const a = document.createElement('a'); a.href=url; a.download='impulso-juvenil-demo.xlsx'; a.click(); setTimeout(()=>URL.revokeObjectURL(url),1000);
- } else {
-  const { jsPDF } = await import('jspdf');
-  const pdf = new jsPDF();
-  pdf.setFillColor(36,107,82); pdf.rect(0,0,210,44,'F'); pdf.setTextColor(255); pdf.setFontSize(23); pdf.text('Impulso Juvenil',18,23); pdf.setFontSize(11); pdf.text('Reporte de impacto social | DEMOSTRACIÓN',18,34);
-  pdf.setTextColor(35,48,42); pdf.setFontSize(12); pdf.text(scope,18,60);
-  const lines = [`Personas acompañadas: ${summary.total}`,`Personas con empleo: ${summary.employed}`,`Personas en formación: ${summary.training}`,`Tasa de inserción laboral: ${summary.rate}%`];
-  lines.forEach((line,i)=>pdf.text(line,18,82+i*14));
-  pdf.text('Resultados por territorio',18,152);
-  [...new Set(rows.map(r=>r.territory))].forEach((territory,i)=>{ const s=summarize(rows.filter(r=>r.territory===territory)); pdf.text(`${territory}: ${s.total} participantes | ${s.employed} con empleo | ${s.rate}%`,18,168+i*12); });
-  pdf.setFontSize(9); pdf.setTextColor(100); pdf.text('Datos ficticios para demostración. No representan resultados reales.',18,266); pdf.text('Inserción = personas con empleo / personas seleccionadas. Cohortes enero-junio 2026.',18,274); pdf.save('impulso-juvenil-demo.pdf');
- }
+import { byTerritoryMunicipal, distribution, formatCount, summarizeMunicipal, type MunicipalMetric } from './municipal-analytics'
+
+const safe = (value: string) => /^[=+@\-\t\r]/.test(value) ? `'${value}` : value
+
+export async function exportReport(format: 'xlsx'|'pdf', rows: MunicipalMetric[], scope: string) {
+  const s = summarizeMunicipal(rows)
+  const territorial = byTerritoryMunicipal(rows)
+  const basic = [
+    ['Personas incorporadas', s.beneficiaries],
+    ['Sin empleo al ingreso', s.unemployedAtEntry],
+    ['Contrataciones confirmadas', s.hires],
+    ['Tasa de inserción (%)', s.insertionRate],
+    ['Personas con empleo actual', s.employedNow],
+    ['Participantes de capacitación', s.trainingParticipants],
+    ['Postulaciones realizadas', s.applications],
+    ['Entrevistas registradas', s.interviews],
+    ['Profesionales incorporados', s.professionals],
+    ['Ofertas laborales publicadas', s.offers],
+  ] as const
+  if (format==='xlsx') {
+    const {Workbook} = await import('exceljs')
+    const workbook = new Workbook()
+    const overview=workbook.addWorksheet('Resumen')
+    overview.addRows([['IMPULSO JUVENIL · DATOS FICTICIOS'],[safe(scope)],...basic.map(([label,value])=>[label,value])])
+    overview.getColumn(1).width=43; overview.getColumn(2).width=22
+    const territorySheet=workbook.addWorksheet('Comunas')
+    territorySheet.addRow(['Comuna','Incorporados','Sin empleo al ingreso','Inserciones','Tasa inserción (%)','Profesionales','Ofertas'])
+    territorial.forEach(t=>territorySheet.addRow([safe(t.territory),t.beneficiaries,t.unemployedAtEntry,t.hires,t.insertionRate,t.professionals,t.offers]))
+    territorySheet.columns.forEach(c=>{ c.width=24 })
+    for(const [sheetName,dimension,metric] of [
+      ['Profesiones','profesion','profesionales'],['Sectores de ofertas','sector_oferta','ofertas'],
+      ['Barreras laborales','barrera','beneficiarios'],['Rangos de edad','edad','beneficiarios'],
+      ['Educación','educacion','beneficiarios'],['Jornadas de ofertas','jornada','ofertas'],
+    ]){
+      const sheet=workbook.addWorksheet(sheetName)
+      sheet.addRow(['Categoría','Total'])
+      distribution(rows,dimension,metric).forEach(v=>sheet.addRow([safe(v.label),v.value]))
+      sheet.getColumn(1).width=40; sheet.getColumn(2).width=18
+    }
+    const aggregate=workbook.addWorksheet('Indicadores agregados')
+    aggregate.addRow(['Periodo','Comuna','Métrica','Dimensión','Categoría','Valor','Origen'])
+    rows.forEach(r=>aggregate.addRow([r.period,safe(r.territory),safe(r.metric),safe(r.dimension),safe(r.category),r.value,r.source]))
+    aggregate.columns.forEach(c=>{c.width=23})
+    for (const sheet of workbook.worksheets) {
+      const header = sheet.getRow(1)
+      header.font={bold:true,color:{argb:'FFFFFFFF'}}
+      header.fill={type:'pattern',pattern:'solid',fgColor:{argb:'FF246B52'}}
+    }
+    const buffer=await workbook.xlsx.writeBuffer()
+    const blob=new Blob([buffer as unknown as BlobPart],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'})
+    const url=URL.createObjectURL(blob)
+    const a=document.createElement('a');a.href=url;a.download='impulso-juvenil-reporte-municipal-DEMO.xlsx';a.click()
+    setTimeout(()=>URL.revokeObjectURL(url),1000)
+  } else {
+    const {jsPDF}=await import('jspdf')
+    const pdf=new jsPDF()
+    pdf.setFillColor(36,107,82);pdf.rect(0,0,210,42,'F')
+    pdf.setTextColor(255);pdf.setFontSize(20);pdf.text('Impulso Juvenil',17,21)
+    pdf.setFontSize(10);pdf.text('Informe municipal de empleabilidad | DATOS FICTICIOS',17,33)
+    pdf.setTextColor(35,48,42);pdf.setFontSize(10)
+    pdf.text(pdf.splitTextToSize(scope,170),17,54)
+    let y=68
+    for(const [label,value] of basic){pdf.text(`${label}: ${typeof value === 'number' ? formatCount(value) : value}`,17,y);y+=10}
+    y+=4;pdf.setFontSize(11);pdf.text('Resultados por comuna',17,y);y+=9;pdf.setFontSize(9)
+    for(const t of territorial){
+      if(y>262){pdf.addPage();y=21}
+      pdf.text(pdf.splitTextToSize(`${t.territory}: ${formatCount(t.beneficiaries)} incorporados · ${formatCount(t.hires)} inserciones · ${t.insertionRate}%`,175),17,y)
+      y+=11
+    }
+    if(y>242){pdf.addPage();y=21}
+    pdf.setTextColor(95)
+    pdf.text(pdf.splitTextToSize('Definición: tasa de inserción = contrataciones confirmadas de personas sin empleo al ingreso / personas sin empleo al ingreso de las cohortes seleccionadas. Datos de prueba, no representan resultados municipales reales.',175),17,y+12)
+    pdf.save('impulso-juvenil-informe-municipal-DEMO.pdf')
+  }
 }

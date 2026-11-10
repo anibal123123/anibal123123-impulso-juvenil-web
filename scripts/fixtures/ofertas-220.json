@@ -1,0 +1,1982 @@
+[
+  {
+    "simulationId": "SIM-O-001",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-01",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-002",
+    "territory": "Concepción",
+    "publishedMonth": "2026-01",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-003",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-08",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-004",
+    "territory": "Hualpén",
+    "publishedMonth": "2026-01",
+    "sector": "Administración básica",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-005",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-04",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-006",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-03",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-007",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-05",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-008",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-04",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-009",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-02",
+    "sector": "Logística y bodega",
+    "experience": "Experiencia básica",
+    "workday": "Turnos",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-010",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-01",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-011",
+    "territory": "Hualpén",
+    "publishedMonth": "2026-03",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-012",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-07",
+    "sector": "Servicios generales",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-013",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-07",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-014",
+    "territory": "Concepción",
+    "publishedMonth": "2026-09",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-015",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-07",
+    "sector": "Servicios generales",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-016",
+    "territory": "Concepción",
+    "publishedMonth": "2026-09",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-017",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-05",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-018",
+    "territory": "Concepción",
+    "publishedMonth": "2026-01",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-019",
+    "territory": "Concepción",
+    "publishedMonth": "2026-10",
+    "sector": "Áreas verdes",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-020",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-07",
+    "sector": "Comercio",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-021",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-08",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-022",
+    "territory": "Concepción",
+    "publishedMonth": "2026-02",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-023",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-03",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-024",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-10",
+    "sector": "Comercio",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-025",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-05",
+    "sector": "Servicios generales",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-026",
+    "territory": "Concepción",
+    "publishedMonth": "2026-08",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-027",
+    "territory": "Hualqui",
+    "publishedMonth": "2026-05",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-028",
+    "territory": "Hualqui",
+    "publishedMonth": "2026-06",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-029",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-09",
+    "sector": "Áreas verdes",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-030",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-05",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-031",
+    "territory": "Concepción",
+    "publishedMonth": "2026-09",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-032",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-04",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-033",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-01",
+    "sector": "Servicios generales",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-034",
+    "territory": "Concepción",
+    "publishedMonth": "2026-10",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-035",
+    "territory": "Concepción",
+    "publishedMonth": "2026-08",
+    "sector": "Administración básica",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-036",
+    "territory": "Concepción",
+    "publishedMonth": "2026-02",
+    "sector": "Servicios generales",
+    "experience": "Experiencia básica",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-037",
+    "territory": "Hualpén",
+    "publishedMonth": "2026-10",
+    "sector": "Servicios generales",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-038",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-08",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-039",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-03",
+    "sector": "Áreas verdes",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-040",
+    "territory": "Concepción",
+    "publishedMonth": "2026-01",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-041",
+    "territory": "Hualqui",
+    "publishedMonth": "2026-04",
+    "sector": "Logística y bodega",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-042",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-02",
+    "sector": "Administración básica",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-043",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-01",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-044",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-07",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-045",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-01",
+    "sector": "Servicios generales",
+    "experience": "Especializada",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-046",
+    "territory": "Hualqui",
+    "publishedMonth": "2026-07",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-047",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-03",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-048",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-10",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-049",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-04",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-050",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-05",
+    "sector": "Administración básica",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-051",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-06",
+    "sector": "Servicios generales",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-052",
+    "territory": "Concepción",
+    "publishedMonth": "2026-01",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-053",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-07",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-054",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-01",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-055",
+    "territory": "Hualqui",
+    "publishedMonth": "2026-01",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-056",
+    "territory": "Hualqui",
+    "publishedMonth": "2026-07",
+    "sector": "Áreas verdes",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-057",
+    "territory": "Concepción",
+    "publishedMonth": "2026-04",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-058",
+    "territory": "Concepción",
+    "publishedMonth": "2026-04",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-059",
+    "territory": "Hualpén",
+    "publishedMonth": "2026-04",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-060",
+    "territory": "Concepción",
+    "publishedMonth": "2026-06",
+    "sector": "Servicios generales",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-061",
+    "territory": "Concepción",
+    "publishedMonth": "2026-10",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-062",
+    "territory": "Concepción",
+    "publishedMonth": "2026-02",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-063",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-04",
+    "sector": "Administración básica",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-064",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-07",
+    "sector": "Áreas verdes",
+    "experience": "Especializada",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-065",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-06",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-066",
+    "territory": "Concepción",
+    "publishedMonth": "2026-10",
+    "sector": "Logística y bodega",
+    "experience": "Especializada",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-067",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-07",
+    "sector": "Administración básica",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-068",
+    "territory": "Hualpén",
+    "publishedMonth": "2026-08",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-069",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-02",
+    "sector": "Administración básica",
+    "experience": "Experiencia básica",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-070",
+    "territory": "Hualqui",
+    "publishedMonth": "2026-06",
+    "sector": "Áreas verdes",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-071",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-07",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-072",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-04",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-073",
+    "territory": "Hualpén",
+    "publishedMonth": "2026-09",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-074",
+    "territory": "Concepción",
+    "publishedMonth": "2026-08",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-075",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-02",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-076",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-06",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-077",
+    "territory": "Hualpén",
+    "publishedMonth": "2026-09",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-078",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-07",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-079",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-06",
+    "sector": "Administración básica",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-080",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-01",
+    "sector": "Comercio",
+    "experience": "Experiencia básica",
+    "workday": "Turnos",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-081",
+    "territory": "Concepción",
+    "publishedMonth": "2026-03",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-082",
+    "territory": "Concepción",
+    "publishedMonth": "2026-05",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-083",
+    "territory": "Concepción",
+    "publishedMonth": "2026-05",
+    "sector": "Áreas verdes",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-084",
+    "territory": "Concepción",
+    "publishedMonth": "2026-02",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-085",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-07",
+    "sector": "Áreas verdes",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-086",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-08",
+    "sector": "Áreas verdes",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-087",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-08",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-088",
+    "territory": "Concepción",
+    "publishedMonth": "2026-05",
+    "sector": "Servicios generales",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-089",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-04",
+    "sector": "Administración básica",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-090",
+    "territory": "Hualqui",
+    "publishedMonth": "2026-09",
+    "sector": "Comercio",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-091",
+    "territory": "Concepción",
+    "publishedMonth": "2026-02",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-092",
+    "territory": "Hualqui",
+    "publishedMonth": "2026-08",
+    "sector": "Áreas verdes",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-093",
+    "territory": "Concepción",
+    "publishedMonth": "2026-04",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-094",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-05",
+    "sector": "Servicios generales",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-095",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-06",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-096",
+    "territory": "Concepción",
+    "publishedMonth": "2026-06",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-097",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-05",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-098",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-03",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-099",
+    "territory": "Hualpén",
+    "publishedMonth": "2026-08",
+    "sector": "Logística y bodega",
+    "experience": "Especializada",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-100",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-09",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-101",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-08",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-102",
+    "territory": "Hualpén",
+    "publishedMonth": "2026-02",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-103",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-06",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-104",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-01",
+    "sector": "Comercio",
+    "experience": "Experiencia básica",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-105",
+    "territory": "Concepción",
+    "publishedMonth": "2026-03",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-106",
+    "territory": "Concepción",
+    "publishedMonth": "2026-09",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-107",
+    "territory": "Hualpén",
+    "publishedMonth": "2026-10",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-108",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-07",
+    "sector": "Comercio",
+    "experience": "Especializada",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-109",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-08",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-110",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-05",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-111",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-08",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-112",
+    "territory": "Hualqui",
+    "publishedMonth": "2026-08",
+    "sector": "Administración básica",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-113",
+    "territory": "Concepción",
+    "publishedMonth": "2026-07",
+    "sector": "Administración básica",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-114",
+    "territory": "Concepción",
+    "publishedMonth": "2026-03",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-115",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-10",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-116",
+    "territory": "Hualqui",
+    "publishedMonth": "2026-01",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-117",
+    "territory": "Concepción",
+    "publishedMonth": "2026-02",
+    "sector": "Servicios generales",
+    "experience": "Especializada",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-118",
+    "territory": "Concepción",
+    "publishedMonth": "2026-06",
+    "sector": "Comercio",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-119",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-08",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-120",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-04",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-121",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-05",
+    "sector": "Servicios generales",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-122",
+    "territory": "Concepción",
+    "publishedMonth": "2026-03",
+    "sector": "Áreas verdes",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-123",
+    "territory": "Concepción",
+    "publishedMonth": "2026-03",
+    "sector": "Comercio",
+    "experience": "Especializada",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-124",
+    "territory": "Concepción",
+    "publishedMonth": "2026-02",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-125",
+    "territory": "Concepción",
+    "publishedMonth": "2026-07",
+    "sector": "Comercio",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-126",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-10",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-127",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-05",
+    "sector": "Áreas verdes",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-128",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-07",
+    "sector": "Áreas verdes",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-129",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-10",
+    "sector": "Áreas verdes",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-130",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-07",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-131",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-04",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-132",
+    "territory": "Concepción",
+    "publishedMonth": "2026-10",
+    "sector": "Áreas verdes",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-133",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-09",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-134",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-04",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-135",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-08",
+    "sector": "Administración básica",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-136",
+    "territory": "Hualpén",
+    "publishedMonth": "2026-10",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-137",
+    "territory": "Concepción",
+    "publishedMonth": "2026-02",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-138",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-02",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-139",
+    "territory": "Concepción",
+    "publishedMonth": "2026-09",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-140",
+    "territory": "Concepción",
+    "publishedMonth": "2026-09",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-141",
+    "territory": "Hualqui",
+    "publishedMonth": "2026-02",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-142",
+    "territory": "Hualpén",
+    "publishedMonth": "2026-01",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-143",
+    "territory": "Hualqui",
+    "publishedMonth": "2026-03",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-144",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-04",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-145",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-02",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-146",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-10",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-147",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-02",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Turnos",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-148",
+    "territory": "Concepción",
+    "publishedMonth": "2026-10",
+    "sector": "Logística y bodega",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-149",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-06",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-150",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-08",
+    "sector": "Servicios generales",
+    "experience": "Experiencia básica",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-151",
+    "territory": "Concepción",
+    "publishedMonth": "2026-10",
+    "sector": "Servicios generales",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-152",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-10",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-153",
+    "territory": "Concepción",
+    "publishedMonth": "2026-05",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-154",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-07",
+    "sector": "Comercio",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-155",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-03",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-156",
+    "territory": "Concepción",
+    "publishedMonth": "2026-07",
+    "sector": "Áreas verdes",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-157",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-08",
+    "sector": "Áreas verdes",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-158",
+    "territory": "Concepción",
+    "publishedMonth": "2026-09",
+    "sector": "Comercio",
+    "experience": "Especializada",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-159",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-05",
+    "sector": "Administración básica",
+    "experience": "Experiencia básica",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-160",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-02",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-161",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-03",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-162",
+    "territory": "Concepción",
+    "publishedMonth": "2026-08",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-163",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-04",
+    "sector": "Logística y bodega",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-164",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-10",
+    "sector": "Áreas verdes",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-165",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-06",
+    "sector": "Administración básica",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-166",
+    "territory": "Concepción",
+    "publishedMonth": "2026-01",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-167",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-07",
+    "sector": "Logística y bodega",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-168",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-03",
+    "sector": "Áreas verdes",
+    "experience": "Especializada",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-169",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-07",
+    "sector": "Áreas verdes",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-170",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-08",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-171",
+    "territory": "Concepción",
+    "publishedMonth": "2026-07",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-172",
+    "territory": "Hualpén",
+    "publishedMonth": "2026-02",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-173",
+    "territory": "Hualqui",
+    "publishedMonth": "2026-02",
+    "sector": "Comercio",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-174",
+    "territory": "Concepción",
+    "publishedMonth": "2026-10",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-175",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-05",
+    "sector": "Administración básica",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-176",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-04",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-177",
+    "territory": "Concepción",
+    "publishedMonth": "2026-09",
+    "sector": "Logística y bodega",
+    "experience": "Experiencia básica",
+    "workday": "Turnos",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-178",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-01",
+    "sector": "Servicios generales",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-179",
+    "territory": "Concepción",
+    "publishedMonth": "2026-03",
+    "sector": "Comercio",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-180",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-03",
+    "sector": "Comercio",
+    "experience": "Especializada",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-181",
+    "territory": "Concepción",
+    "publishedMonth": "2026-09",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-182",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-09",
+    "sector": "Administración básica",
+    "experience": "Especializada",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-183",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-03",
+    "sector": "Logística y bodega",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-184",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-02",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-185",
+    "territory": "Concepción",
+    "publishedMonth": "2026-01",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-186",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-08",
+    "sector": "Logística y bodega",
+    "experience": "Experiencia básica",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-187",
+    "territory": "Concepción",
+    "publishedMonth": "2026-01",
+    "sector": "Comercio",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-188",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-10",
+    "sector": "Áreas verdes",
+    "experience": "Especializada",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-189",
+    "territory": "Hualpén",
+    "publishedMonth": "2026-03",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-190",
+    "territory": "Hualpén",
+    "publishedMonth": "2026-06",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-191",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-10",
+    "sector": "Administración básica",
+    "experience": "Especializada",
+    "workday": "Turnos",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-192",
+    "territory": "Concepción",
+    "publishedMonth": "2026-08",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-193",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-01",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-194",
+    "territory": "Concepción",
+    "publishedMonth": "2026-09",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-195",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-04",
+    "sector": "Áreas verdes",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-196",
+    "territory": "Concepción",
+    "publishedMonth": "2026-09",
+    "sector": "Alimentación",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-197",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-06",
+    "sector": "Comercio",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-198",
+    "territory": "Concepción",
+    "publishedMonth": "2026-07",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-199",
+    "territory": "Concepción",
+    "publishedMonth": "2026-09",
+    "sector": "Logística y bodega",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-200",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-07",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-201",
+    "territory": "Concepción",
+    "publishedMonth": "2026-04",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-202",
+    "territory": "Hualpén",
+    "publishedMonth": "2026-07",
+    "sector": "Comercio",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-203",
+    "territory": "Concepción",
+    "publishedMonth": "2026-05",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-204",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-05",
+    "sector": "Áreas verdes",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-205",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-08",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-206",
+    "territory": "Concepción",
+    "publishedMonth": "2026-06",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-207",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-02",
+    "sector": "Comercio",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-208",
+    "territory": "Concepción",
+    "publishedMonth": "2026-09",
+    "sector": "Logística y bodega",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Activa"
+  },
+  {
+    "simulationId": "SIM-O-209",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-08",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-210",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-10",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-211",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-04",
+    "sector": "Comercio",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-212",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-08",
+    "sector": "Servicios generales",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-213",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-03",
+    "sector": "Comercio",
+    "experience": "Sin experiencia",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-214",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-05",
+    "sector": "Logística y bodega",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-215",
+    "territory": "Hualqui",
+    "publishedMonth": "2026-05",
+    "sector": "Logística y bodega",
+    "experience": "Experiencia básica",
+    "workday": "Turnos",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-216",
+    "territory": "San Pedro de la Paz",
+    "publishedMonth": "2026-10",
+    "sector": "Comercio",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-217",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-01",
+    "sector": "Administración básica",
+    "experience": "Experiencia básica",
+    "workday": "Completa",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-218",
+    "territory": "Concepción",
+    "publishedMonth": "2026-01",
+    "sector": "Servicios generales",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-219",
+    "territory": "Chiguayante",
+    "publishedMonth": "2026-09",
+    "sector": "Alimentación",
+    "experience": "Experiencia básica",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  },
+  {
+    "simulationId": "SIM-O-220",
+    "territory": "Talcahuano",
+    "publishedMonth": "2026-05",
+    "sector": "Logística y bodega",
+    "experience": "Sin experiencia",
+    "workday": "Parcial",
+    "status": "Cerrada"
+  }
+]

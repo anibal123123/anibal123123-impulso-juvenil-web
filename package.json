@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "demo:generate": "node scripts/generate-synthetic-data.mjs",
+    "demo:verify": "node scripts/verify-demo.mjs"
   },
   "dependencies": {
     "@ai-sdk/react": "^4.0.149",

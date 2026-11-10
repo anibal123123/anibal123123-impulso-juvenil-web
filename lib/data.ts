@@ -1,27 +1,25 @@
 import 'server-only'
-import { and, asc, count, desc, eq, ilike, max, sql } from 'drizzle-orm'
+import { and, count, desc, eq, ilike, sql } from 'drizzle-orm'
 import { db } from '@/lib/db'
-import { indicador, reporte } from '@/lib/db/schema'
+import { reporte } from '@/lib/db/schema'
+import { getMunicipalMetrics, importMunicipalMetrics } from '@/lib/municipal-server'
+import { summarizeMunicipal, type MunicipalMetric } from '@/lib/municipal-analytics'
 import type { IndicatorRow } from '@/lib/metrics'
 
 export async function getIndicators(organismoId: string) {
-  const [rows, [meta]] = await Promise.all([
-    db
-      .select({
-        periodo: indicador.periodo,
-        territorio: indicador.territorio,
-        acompanados: indicador.acompanados,
-        empleados: indicador.empleados,
-        formacion: indicador.formacion,
-        busqueda: indicador.busqueda,
-        origen: indicador.origen,
-      })
-      .from(indicador)
-      .where(eq(indicador.organismoId, organismoId))
-      .orderBy(asc(indicador.periodo), asc(indicador.territorio)),
-    db.select({ updatedAt: max(indicador.updatedAt) }).from(indicador).where(eq(indicador.organismoId, organismoId)),
-  ])
-  return { rows: rows as IndicatorRow[], updatedAt: meta?.updatedAt?.toISOString() ?? null }
+  const values = await getMunicipalMetrics(organismoId)
+  const keys = [...new Set(values.map(r=>`${r.period}|${r.territory}`))].sort()
+  const rows: IndicatorRow[] = keys.map(key=>{
+    const [period,territory]=key.split('|')
+    const group=values.filter(r=>r.period===period&&r.territory===territory)
+    const s=summarizeMunicipal(group)
+    return {periodo:`${period}-01`,territorio:territory,acompanados:s.beneficiaries,
+      sinEmpleoInicial:s.unemployedAtEntry,contrataciones:s.hires,empleoActual:s.employedNow,
+      formacion:s.inTraining,busqueda:s.searching,capacitaciones:s.trainingParticipants,
+      postulaciones:s.applications,entrevistas:s.interviews,profesionales:s.professionals,ofertas:s.offers,
+      origen:group.some(r=>r.source==='sintetico')?'sintetico':'importado'}
+  })
+  return {rows,updatedAt:null}
 }
 
 export const REPORTS_PAGE_SIZE = 10
@@ -61,22 +59,21 @@ export async function saveReport(values: { organismoId: string; userId: string; 
   return row
 }
 
-export async function upsertIndicators(organismoId: string, importKey: string, rows: Omit<IndicatorRow, 'origen'>[]) {
-  if (!rows.length) return 0
-  await db
-    .insert(indicador)
-    .values(rows.map(r => ({ ...r, organismoId, origen: 'importado', importKey })))
-    .onConflictDoUpdate({
-      target: [indicador.organismoId, indicador.periodo, indicador.territorio],
-      set: {
-        acompanados: sql`excluded.acompanados`,
-        empleados: sql`excluded.empleados`,
-        formacion: sql`excluded.formacion`,
-        busqueda: sql`excluded.busqueda`,
-        origen: sql`excluded.origen`,
-        importKey: sql`excluded."importKey"`,
-        updatedAt: sql`now()`,
-      },
-    })
+// Compatibilidad con importadores del formato de indicadores mensuales.
+// Los nuevos datos se guardan en estadistica_municipal, no en la tabla antigua indicador.
+export async function upsertIndicators(organismoId: string, _importKey: string, rows: Omit<IndicatorRow,'origen'>[]) {
+  const mapped:MunicipalMetric[]=[]
+  for(const r of rows){
+    const base={period:r.periodo.slice(0,7),territory:r.territorio,dimension:'resumen',category:'total',source:'importado' as const}
+    const pairs:[string,number][]=[
+      ['beneficiarios',r.acompanados],['sin_empleo_inicial',r.sinEmpleoInicial],
+      ['contrataciones',r.contrataciones],['con_empleo_actual',r.empleoActual],
+      ['en_formacion',r.formacion],['en_busqueda',r.busqueda],['participacion_capacitacion',r.capacitaciones],
+      ['postulaciones',r.postulaciones],['entrevistas',r.entrevistas],
+      ['profesionales',r.profesionales],['ofertas',r.ofertas],
+    ]
+    pairs.forEach(([metric,value])=>mapped.push({...base,metric,value}))
+  }
+  await importMunicipalMetrics(organismoId,mapped)
   return rows.length
 }
