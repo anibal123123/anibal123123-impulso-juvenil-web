@@ -223,3 +223,61 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 .approval-controls label{display:grid;gap:6px;font-size:13px;font-weight:600;color:#385c49}
 .approval-controls select{min-width:160px;max-width:240px;padding:10px;border-radius:9px;border:1px solid #bdcfc4;color:#1a3024;background:#fff}
 .approval-controls button{min-height:39px}
+
+/* Detector de brechas laborales: agregados y reglas trazables (sin datos personales). */
+.labor-detector{display:grid;gap:22px}
+.labor-heading{display:flex;justify-content:space-between;gap:22px;align-items:flex-start}
+.labor-heading h2{font-size:24px;font-weight:650;letter-spacing:-.65px;color:#244a39;margin:9px 0}
+.labor-heading p{font-size:12px;line-height:1.8;color:#768478;max-width:660px}
+.labor-eyebrow{font-size:9px;font-weight:700;letter-spacing:1.2px;color:#40795c;display:flex;align-items:center;gap:9px}
+.secondary-action{border:1px solid #bed1c5;border-radius:8px;background:#fff;color:#24684d;display:flex;gap:8px;align-items:center;justify-content:center;white-space:nowrap;font-size:11px;font-weight:650;padding:11px 14px;cursor:pointer}
+.secondary-action:disabled{opacity:.45;cursor:not-allowed}
+.secondary-action:hover:not(:disabled){background:#edf5ef}
+.labor-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.labor-kpis>div{background:#fff;border:1px solid #e1e9df;border-radius:10px;padding:18px 16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.labor-kpis span{font-size:10px;color:#71836f;line-height:1.5}
+.labor-kpis strong{font-size:29px;font-weight:650;color:#295b43;line-height:1}
+.labor-kpis small{font-size:9px;color:#8d988c;line-height:1.5}
+.labor-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(270px,.85fr);gap:17px;align-items:start}
+.labor-chart-panel,.labor-recommendations{min-width:0}
+.labor-chart-panel .panel-heading,.labor-recommendations .panel-heading{display:flex;justify-content:space-between;gap:12px}
+.labor-chart-panel .panel-heading>svg,.labor-recommendations .panel-heading>svg{color:#82a28d;flex-shrink:0}
+.labor-filter-buttons{display:flex;flex-wrap:wrap;gap:6px;margin:17px 0 12px}
+.labor-filter-buttons button{border:1px solid #dbe8df;background:#fff;border-radius:100px;color:#6a796d;font-size:9px;padding:8px 10px;cursor:pointer}
+.labor-filter-buttons button.chosen{background:#246b52;border-color:#246b52;color:#fff}
+.labor-legend{display:flex;flex-wrap:wrap;gap:14px;color:#7b887d;font-size:10px;margin:10px 0 14px}
+.labor-legend span{display:inline-flex;align-items:center;gap:7px}
+.labor-dot{display:inline-block;width:9px;height:9px;border-radius:50%}
+.labor-dot.interested{background:#3f8060}.labor-dot.postings{background:#e0ae56}
+.labor-sector-list{display:grid;gap:9px}
+.labor-sector{display:block;width:100%;text-align:left;background:#fff;border:1px solid #e4ebe2;border-radius:9px;padding:13px 14px;cursor:pointer;color:#385843}
+.labor-sector:hover,.labor-sector.selected{border-color:#90b7a1;background:#fbfefa}
+.labor-sector.selected{box-shadow:inset 3px 0 0 #3f8060}
+.labor-sector-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+.labor-sector-title strong{font-size:12px;font-weight:650}
+.labor-pill{font-size:9px;line-height:1.5;font-weight:650;border-radius:100px;padding:4px 8px;display:inline-flex;width:fit-content}
+.labor-pill.alta{color:#8d4538;background:#fff0eb}.labor-pill.media{color:#855c24;background:#fff5e2}.labor-pill.observacion{color:#4b6c5a;background:#ebf4ed}
+.labor-pair{display:grid;grid-template-columns:89px minmax(60px,1fr) 56px;align-items:center;gap:9px;margin-top:7px}
+.labor-pair span{font-size:9px;color:#748374}.labor-pair b{font-size:10px;font-weight:650;text-align:right;color:#4c6956}
+.labor-bar-track{height:8px;border-radius:9px;background:#eef3ec;overflow:hidden}
+.labor-bar{display:block;height:100%;border-radius:9px;min-width:0}
+.labor-bar.interested{background:#3f8060}.labor-bar.postings{background:#e0ae56}
+.labor-small-note{font-size:9px;line-height:1.6;color:#8d978b}
+.labor-active-sector{border-bottom:1px solid #edf1eb;padding:18px 0}
+.labor-active-sector>span{font-size:9px;letter-spacing:1px;color:#899a8b}
+.labor-active-sector h3{font-size:22px;line-height:1.25;letter-spacing:-.4px;color:#29563e;margin:9px 0 12px}
+.labor-balance{display:flex;flex-direction:column;gap:6px;margin:20px 0}
+.labor-balance span{color:#7b897e;font-size:10px}.labor-balance strong{font-size:27px;color:#315f47}.labor-balance small{font-size:9px;line-height:1.7;color:#8d9b8d}
+.labor-recommendation-text{font-size:12px;line-height:1.9;color:#526c5b;margin:15px 0}
+.labor-rule{display:flex;gap:10px;background:#f3f8f3;border-radius:9px;padding:12px;color:#4d775d;font-size:10px;line-height:1.7}
+.labor-rule svg{flex-shrink:0;margin-top:2px}
+.labor-training{border-top:1px solid #e7eee6;margin-top:23px;padding-top:20px;display:flex;align-items:flex-start;gap:10px;color:#567a61}
+.labor-training svg{flex-shrink:0}.labor-training strong{font-size:11px}.labor-training p{font-size:10px;line-height:1.8;color:#758677;margin-top:7px}
+.labor-method{display:grid;gap:10px}.labor-method>div{display:flex;gap:9px;align-items:center;color:#386b50;font-size:12px}
+.labor-method p{color:#7a897b;font-size:10px;line-height:1.85;margin:0}
+.labor-empty{display:grid;justify-items:start;gap:13px;color:#54745c}.labor-empty h2{font-size:18px}.labor-empty p{font-size:11px;line-height:1.8;color:#7b897e}
+@media(max-width:1160px){.labor-layout{grid-template-columns:1fr}.labor-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.labor-heading{flex-direction:column}.labor-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.labor-kpis strong{font-size:23px}.labor-sector-title{flex-wrap:wrap}.labor-pair{grid-template-columns:80px minmax(50px,1fr) 56px}}
+@media(max-width:410px){.labor-kpis{grid-template-columns:1fr}.labor-pair{grid-template-columns:74px minmax(45px,1fr) 55px}}
+
+.labor-sector-counts{font-size:9px;color:#839184;line-height:1.6;margin-top:10px}
